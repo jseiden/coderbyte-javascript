@@ -1,2 +1,2 @@
 # coderbyte-javascript
-my solutions to Coderbyte challenges 
+Here are my solutions to Coderbyte challenges in Javascript  
