@@ -4,6 +4,11 @@
 // The output must contain a number in the one's place even if it is a zero. 
 
 function FormattedDivision(num1, num2) {
-  return (num1/num2).toLocaleString("en");
+  var div = (num1/num2).toFixed(4);
+  var arr = div.toString().split(".");
+
+  arr[0] = (+arr[0]).toLocaleString("en");
+  return arr.join(".");
 }
+
 
