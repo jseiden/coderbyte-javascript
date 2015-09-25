@@ -4,7 +4,7 @@
 // The array will not be empty, will not contain all the same elements, and may contain negative numbers. 
 
 function ArrayAddition(arr) {
-  var sortedArr = arr.sort(function(a,b){return a - b});
+  var sortedArr = arr.sort( function(a,b) { return a - b });
   var largestNum = arr.pop();
   var result = false;
 
