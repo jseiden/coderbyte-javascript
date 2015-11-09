@@ -6,41 +6,38 @@
 // Only "(", ")", "[", and "]" will be used as brackets. If str contains no brackets return 1. 
 
 function MultipleBrackets(str) {
-  var arr = str.split("");
   var flag = 1;
   var openParens = 0;
   var closeParens = 0;
   var openBrackets = 0;
   var closeBrackets = 0;
 
-  function recurse(a)  {
+  function rec(a)  {
+
     if (a.length === 0) {
       return;
     }
+
     var ch = a.splice(0,1)[0];
-    switch (ch) {
-      case "(":
-        openParens++;
-        break;
-      case ")":
-        closeParens++;
-        break;
-      case "[":
-        openBrackets++;
-        break;
-      case "]":
-        closeBrackets++;
-        break;
+
+    if (ch === "(") {
+      openParens++;
+    } else if (ch === ")") {
+      closeParens++;
+    } else if (ch === "[") {
+      openBrackets++;
+    } else if (ch === "]") {
+      closeBrackets++;
     }
 
     if (closeParens > openParens || closeBrackets > openBrackets) {
       flag = 0;
     }
 
-    recurse(a);
+    rec(a);
   }
   
-  recurse(arr);
+  rec(str.split(""));
 
   if (openParens !== closeParens || openBrackets !== closeBrackets) {
     flag = 0;
@@ -48,3 +45,4 @@ function MultipleBrackets(str) {
 
   return flag === 0 ? 0 : (openBrackets + openParens) === 0 ? 1 : 1 + " " + (openBrackets + openParens); 
 }
+
