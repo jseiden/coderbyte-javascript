@@ -5,8 +5,8 @@
 function MeanMode(arr) {
 
  function findMean(array) {
-    var mean = arr.reduce(function(a,b){return a + b})
-    return mean/arr.length;
+    var sum = arr.reduce(function(a,b){return a + b});
+    return sum/arr.length;
   }
 
   function findMode(array) {
