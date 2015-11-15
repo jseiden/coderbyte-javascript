@@ -3,11 +3,11 @@
 // otherwise return the string false. The range will be between 1 and 2^16. 
 
 function PrimeTime(num) {
-for(var i = num - 1; i > 1; i--) {
-  if(num % i === 0) {
-    return false
+  for (var i = num - 1; i > 1; i--) {
+    if (num % i === 0) {
+      return false
+    }
   }
-}
-return true;
+  return true;
 }
 
