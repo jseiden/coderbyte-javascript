@@ -5,6 +5,4 @@
 function TimeConvert(num) {
   var hours = num < 60 ? 0 : (num - (num % 60))/60;
   return hours + ":" + num % 60;
-
-
 }
