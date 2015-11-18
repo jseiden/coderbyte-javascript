@@ -4,3 +4,15 @@ function FirstReverse(str) {
   return str === "" ? "" : FirstReverse(str.slice(1)) + str[0];
 }
 
+//function FirstReverse(str) {
+  //var result = [];
+  //str.split("").forEach(function(letter) { 
+    //result.unshift(letter);
+  //});
+  //return result.join("");
+//}
+
+//function FirstReverse(str) {
+  //return str.split("").reverse().join("");
+//}
+
